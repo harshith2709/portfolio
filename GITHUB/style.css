@@ -1,0 +1,173 @@
+:root {
+    --bg-color: #0a0a0a;
+    --text-color: #39ff14; /* Classic terminal green */
+    --accent-color: #ff0055; /* Arcade magenta */
+    --border-color: #ffffff;
+}
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+/* Navigation */
+nav {
+    background-color: #111;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 4px solid var(--accent-color);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: var(--border-color);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+/* Typography & Layout */
+h1, h2, h3 {
+    text-transform: uppercase;
+    color: var(--border-color);
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 4px dashed var(--accent-color);
+    background-color: #000;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Header & Blinking Text */
+header {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.blink {
+    animation: blinker 1s linear infinite;
+    color: var(--accent-color);
+}
+
+@keyframes blinker {
+    50% { opacity: 0; }
+}
+
+/* About Section */
+.about-grid {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.photo-box img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 4px solid var(--text-color);
+    box-shadow: 8px 8px 0px var(--accent-color);
+    image-rendering: pixelated; /* Enhances retro look for images */
+}
+
+/* Skills List */
+.pixel-list {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.pixel-list li {
+    margin-bottom: 15px;
+}
+
+/* Project Cards */
+.project-card {
+    border: 2px solid var(--text-color);
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px 0px var(--text-color);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--accent-color);
+    border: 3px solid var(--accent-color);
+    padding: 10px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+/* Form Styles */
+.retro-form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.retro-form input, .retro-form textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #000;
+    border: 2px solid var(--text-color);
+    color: var(--text-color);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+
+.retro-form input:focus, .retro-form textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .about-grid {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
